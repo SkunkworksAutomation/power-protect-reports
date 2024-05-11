@@ -100,6 +100,6 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 | Name                 | Description                                                                                                                                          | Output    |
 |:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-nas-file          | Nas file report                                                                                                                                      | xlsx, pdf |
+| dm-nas-file          | A list of files protected on your NAS array (requires search engine)                                                                                 | xlsx, pdf |
 
 ![dm-nas-file](/Assets/dm-nas-file.png)
