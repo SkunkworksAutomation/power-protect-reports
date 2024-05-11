@@ -1,5 +1,5 @@
-# PowerProtect Reports
-
+# power-protect-reports
+Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf
  
 # Reports
 | Name                 | Description                                                                                                                                          | Output    |
