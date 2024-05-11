@@ -1,0 +1,53 @@
+
+{
+    "servers": [
+        "10.239.100.131"
+    ],
+    "retries": 3,
+    "seconds": 10,
+    "pagesize": 100,
+    "reportOutPath":"C:\\Reports\\output",
+    "headerRow": 5,
+    "logoPath":"C:\\Reports\\misc\\logo.png",
+    "logoScale": 0.18,
+    "reports":[
+        {
+            "file":"dm-activities-all.ps1",
+            "reportName":"dm-activities-all",
+            "tableStyle": "TableStyleMedium2",
+            "numberOfDays": 1,
+            "pdfScale": 28,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-activities-failed.ps1",
+            "reportName":"dm-activities-failed",
+            "tableStyle": "TableStyleMedium3",
+            "numberOfDays": 1,
+            "pdfScale": 16,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-identities-access.ps1",
+            "reportName":"dm-identities-access",
+            "tableStyle": "TableStyleMedium2",
+            "pdfScale": 95,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-nas-file.ps1",
+            "reportName":"dm-nas-file",
+            "tableStyle": "TableStyleMedium2",
+            "pdfScale": 35,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-activities-stats.ps1",
+            "reportName":"dm-activities-stats",
+            "tableStyle": "TableStyleMedium2",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        }
+    ]
+}
