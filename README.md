@@ -1,6 +1,10 @@
 # PowerProtect Reports (v19.16)
 Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf format.
 
+# Dependencies
+- Windows
+- PowerShell 7.(latest)
+
 # Usage
 - misc\logo.png change this to your logo.png
 - misc\configuration.json change this to align with your environment
