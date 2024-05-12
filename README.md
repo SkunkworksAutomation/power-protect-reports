@@ -36,6 +36,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-assets-nopolicy   | All assets not assigned to a protection policy which may indicate a gap in protection                                                                  | xlsx, pdf |
+
+![dm-assets-nopolicy](/Assets/dm-assets-nopolicy.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-copies-location   | Get all of the copies for asset type {x} in location {x} (LOCAL, or CLOUD)                                                                             | xlsx, pdf |
 
 ![dm-copies-location](/Assets/dm-copies-location.png)
@@ -117,6 +123,14 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
         {
             "file":"dm-assets-nocopies.ps1",
             "reportName":"dm-assets-nocopies",
+            "tableStyle": "TableStyleMedium3",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-assets-nopolicy.ps1",
+            "reportName":"dm-assets-nopolicy",
             "tableStyle": "TableStyleMedium3",
             "numberOfDays": 1,
             "pdfScale": 31,
