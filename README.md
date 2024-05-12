@@ -47,6 +47,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 ![dm-copies-location](/Assets/dm-copies-location.png)
 
 
+| Name                    | Description                                                                                                                                         | Output    |
+|:-----------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-credentials-external | Get all of the external credentials configured within PowerProtect Data manager                                                                     | xlsx, pdf |
+
+![dm-credentials-external](/Assets/dm-credentials-external.png)
+
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-identities-access | All, identity access account and groups configured with access to PowerProtect Data Manager                                                            | xlsx, pdf |
