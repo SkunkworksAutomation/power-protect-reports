@@ -114,7 +114,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 | Name                 | Description                                                                                                                                          | Output    |
 |:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-copies-location   | All, identity access account and groups configured with access to PowerProtect Data Manager                                                          | xlsx, pdf |
+| dm-copies-location   | All, copies for asset type x in location x (LOCAL, or CLOUD)                                                                                         | xlsx, pdf |
 
 ![dm-copies-location](/Assets/dm-copies-location.png)
 
