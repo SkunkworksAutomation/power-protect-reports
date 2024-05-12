@@ -2,8 +2,9 @@
 Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf format.
 
 # Dependencies
-- Windows
+- Windows 10 or 11
 - PowerShell 7.(latest)
+- Microsoft® Excel® for Microsoft 365
 
 # Usage
 - misc\logo.png change this to your logo.png
