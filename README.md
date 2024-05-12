@@ -5,16 +5,21 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 - Moddify the misc/configuration.json file to align with your environment.
 - Add you logo to the misc folder on your local system
 
-| Property             | Description                                                                                       | Type   |
-|:--------------------:|:--------------------------------------------------------------------------------------------------|:------:|
-| servers              | PowerProtect Data Manager Servers we want to query                                                | array  |
-| retries              | The number of retries, in seconds, when trying to connect to a PowerProtect Data Manager server   | int    |
-| pagesize             | Size of the pages to be returned by PowerProtect Data Manager                                     | int    |
-| reportOutPath        | The system path you want the report files dropped                                                 | string |
-| headerRow            | The number of rows to skip for your logo in the report                                            | int    |
-| logoPath             | The system path where your logo is located                                                        | string |
-| logoScale            | The scale you want you logo reduced by                                                            | int    |
-| reports              | Report specific configurations, these can be left at the default settings                         | array  |
+| Property             | Description                                                                                       | Type    |
+|:--------------------:|:--------------------------------------------------------------------------------------------------|:-------:|
+| servers              | PowerProtect Data Manager Servers we want to query                                                | array   |
+| retries              | The number of retries, in seconds, when trying to connect to a PowerProtect Data Manager server   | int     |
+| pagesize             | Size of the pages to be returned by PowerProtect Data Manager                                     | int     |
+| reportOutPath        | The system path you want the report files dropped                                                 | string  |
+| headerRow            | The number of rows to skip for your logo in the report                                            | int     |
+| logoPath             | The system path where your logo is located                                                        | string  |
+| logoScale            | The scale you want you logo reduced by                                                            | decimal |
+| reports              | Report specific configurations, these can be left at the default settings                         | array   |
+| reports.file         | Name of the PowerShell 7 script being run, used to look up report settings                        | string  |
+| reports.reportName   | The name of the report can be set with this property yyyyMMdd-reportName                          | string  |
+| reports.tableStyle   | The style of the table you'd like to see the report rednered with in excel                        | string  |
+| reports.numberOfDays | The number of days you'd like to return if the filter contains a data parameter                   | int     |
+| reports.pdfScale     | Scale the data table up or down to a percent of its original size for rendering in pdf format     | int     |
 
 
 ## Sample configuration.json
