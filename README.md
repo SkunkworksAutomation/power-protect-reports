@@ -2,8 +2,8 @@
 Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf
 
 # Usage
-- Moddify the misc/configuration.json file to align with your environment.
-- Add your logo to the misc folder on your local system
+- misc\logo.png change this to your logo.png
+- misc\configuration.json change this to align with your environment
 
 | Property             | Description                                                                                       | Type    |
 |:--------------------:|:--------------------------------------------------------------------------------------------------|:-------:|
