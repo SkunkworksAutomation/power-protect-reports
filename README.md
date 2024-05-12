@@ -14,7 +14,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 ![dm-activities-all](/Assets/dm-activities-all.png)
 
 > [!WARNING]
-> This report has the potential to be very large if you set the numberOfDays param to large!
+> This report has the potential to be very large. Adjust the numberOfDays param within reason.
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
@@ -23,7 +23,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 ![dm-activities-failed](/Assets/dm-activities-failed.png)
 
 > [!WARNING]
-> This report has the potential to be very large if you set the numberOfDays param to large!
+> This report has the potential to be very large. Adjust the numberOfDays param within reason.
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
@@ -32,7 +32,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 ![dm-activities-stats](/Assets/dm-activities-stats.png)
 
 > [!WARNING]
-> This report has the potential to be very large if you set the numberOfDays param to large!
+> This report has the potential to be very large. Adjust the numberOfDays param within reason.
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
