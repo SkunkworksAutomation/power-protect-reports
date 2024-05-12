@@ -32,7 +32,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 ```
 {
     "servers": [
-        "10.239.100.131"
+        "10.x.x.x"
     ],
     "retries": 3,
     "seconds": 10,
