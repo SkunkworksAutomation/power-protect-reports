@@ -265,7 +265,7 @@ $Servers | ForEach-Object {
         try {
             # CONNECT THE THE REST API
             connect-dmapi -Server $_
-            Write-Host "[PowerProtect Data Manager]: Getting assets with no copies" `
+            Write-Host "[PowerProtect Data Manager]: Getting assets with no policy" `
             -ForegroundColor Green
             # QUERY FOR THE ACTIVITIES
             $Query = get-dmassets -Filters $Filters -PageSize $PageSize
