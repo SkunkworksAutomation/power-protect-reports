@@ -416,29 +416,30 @@ $Servers | ForEach-Object {
             $Query = get-dmfileinstances -Filters $Filters -PageSize $PageSize
 
             
-            $Query | ForEach-Object {
-                $Filters = @("id eq `"$($_.protectionPolicyId)`"")
+            foreach($Record in $Query) {
+                $Filters = @("id eq `"$($Record.protectionPolicyId)`"")
                 $Policy = get-dmprotectionpolicies -Filters $Filters -PageSize $PageSize
                 $Object = [ordered]@{
-                    id = $_.id
-                    type = $_.type
-                    itemType = $_.itemType
-                    backupType = $_.backupType
-                    name = $_.name
-                    location = $_.location
-                    size = Convert-BytesToSize -Size $_.size
-                    copyStartDate = $_.copyStartDate
-                    copyEndDate = $_.copyEndDate
-                    updatedAt = $_.updatedAt
-                    createdAt = $_.createdAt
-                    protectionPolicyId = $_.protectionPolicyId
+                    id = $Record.id
+                    type = $Record.type
+                    itemType = $Record.itemType
+                    backupType = $Record.backupType
+                    name = $Record.name
+                    location = $Record.location
+                    size = Convert-BytesToSize -Size $Record.size
+                    copyStartDate = $Record.copyStartDate
+                    copyEndDate = $Record.copyEndDate
+                    updatedAt = $Record.updatedAt
+                    createdAt = $Record.createdAt
+                    protectionPolicyId = $Record.protectionPolicyId
                     protectionPolicyName = $Policy.name
-                    sourceServer = $_.sourceServer
-                    assetName = $_.assetName
-                    assetId = $_.assetId
-                    diskLabel = $_.diskLabel
-                    diskName = $_.diskName
-                    objectType = $_.objectType
+                    sourceServer = $Record.sourceServer
+                    assetName = $Record.assetName
+                    assetId = $Record.assetId
+                    diskLabel = $Record.diskLabel
+                    diskName = $Record.diskName
+                    objectType = $Record.objectType
+                    ppdmServer = $_
                 }
                 $Files += (New-Object -TypeName pscustomobject -Property $Object)
             }
@@ -502,6 +503,7 @@ $Excel.cells.item($HeaderRow,16) = "assetId"
 $Excel.cells.item($HeaderRow,17) = "diskLabel"
 $Excel.cells.item($HeaderRow,18) = "diskName"
 $Excel.cells.item($HeaderRow,19) = "objectType"
+$Excel.cells.item($HeaderRow,20) = "ppdmServer"
 
 for($i=0;$i -lt $Files.length; $i++) {
 
@@ -530,6 +532,7 @@ for($i=0;$i -lt $Files.length; $i++) {
     $Excel.cells.item($RowOffSet,17) = $Files[$i].diskLabel
     $Excel.cells.item($RowOffSet,18) = $Files[$i].diskName
     $Excel.cells.item($RowOffSet,19) = $Files[$i].objectType
+    $Excel.cells.item($RowOffSet,20) = $Files[$i].ppdmServer
 
 }
 

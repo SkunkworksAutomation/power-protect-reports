@@ -32,7 +32,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 ```
 {
     "servers": [
-        "10.x.x.x"
+        "10.239.100.131"
     ],
     "retries": 3,
     "seconds": 10,
@@ -59,6 +59,23 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "pdfOrientation": 2
         },
         {
+            "file":"dm-activities-stats.ps1",
+            "reportName":"dm-activities-stats",
+            "tableStyle": "TableStyleMedium2",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-copies-location.ps1",
+            "reportName":"dm-copies-location",
+            "tableStyle": "TableStyleMedium18",
+            "assetType": "VMWARE_VIRTUAL_MACHINE",
+            "copyLocation":"LOCAL",
+            "pdfScale": 45,
+            "pdfOrientation": 2
+        },
+        {
             "file":"dm-identities-access.ps1",
             "reportName":"dm-identities-access",
             "tableStyle": "TableStyleMedium2",
@@ -70,14 +87,6 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "reportName":"dm-nas-file",
             "tableStyle": "TableStyleMedium2",
             "pdfScale": 35,
-            "pdfOrientation": 2
-        },
-        {
-            "file":"dm-activities-stats.ps1",
-            "reportName":"dm-activities-stats",
-            "tableStyle": "TableStyleMedium2",
-            "numberOfDays": 1,
-            "pdfScale": 31,
             "pdfOrientation": 2
         }
     ]
@@ -102,6 +111,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 | dm-activities-stats  | All, asset level, protection activity status in the last x days including assetSize, preCompSize, postCompSize, dedupeRatio, and reductionPercentage | xlsx, pdf |
 
 ![dm-activities-stats](/Assets/dm-activities-stats.png)
+
+| Name                 | Description                                                                                                                                          | Output    |
+|:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-copies-location   | All, identity access account and groups configured with access to PowerProtect Data Manager                                                          | xlsx, pdf |
+
+![dm-copies-location](/Assets/dm-copies-location.png)
 
 | Name                 | Description                                                                                                                                          | Output    |
 |:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|

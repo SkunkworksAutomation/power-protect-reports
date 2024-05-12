@@ -1,7 +1,7 @@
 
 {
     "servers": [
-        "10.x.x.x"
+        "10.239.100.131"
     ],
     "retries": 3,
     "seconds": 10,
@@ -28,6 +28,23 @@
             "pdfOrientation": 2
         },
         {
+            "file":"dm-activities-stats.ps1",
+            "reportName":"dm-activities-stats",
+            "tableStyle": "TableStyleMedium2",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-copies-location.ps1",
+            "reportName":"dm-copies-location",
+            "tableStyle": "TableStyleMedium18",
+            "assetType": "VMWARE_VIRTUAL_MACHINE",
+            "copyLocation":"LOCAL",
+            "pdfScale": 45,
+            "pdfOrientation": 2
+        },
+        {
             "file":"dm-identities-access.ps1",
             "reportName":"dm-identities-access",
             "tableStyle": "TableStyleMedium2",
@@ -39,14 +56,6 @@
             "reportName":"dm-nas-file",
             "tableStyle": "TableStyleMedium2",
             "pdfScale": 35,
-            "pdfOrientation": 2
-        },
-        {
-            "file":"dm-activities-stats.ps1",
-            "reportName":"dm-activities-stats",
-            "tableStyle": "TableStyleMedium2",
-            "numberOfDays": 1,
-            "pdfScale": 31,
             "pdfOrientation": 2
         }
     ]
