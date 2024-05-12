@@ -71,13 +71,13 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 | reportOutPath        | The system path you want the report files dropped                                                 | string  |
 | headerRow            | The number of rows to skip for your logo in the report                                            | int     |
 | logoPath             | The system path where your logo is located                                                        | string  |
-| logoScale            | The scale you want you logo reduced by                                                            | decimal |
+| logoScale            | Reduce the logo.png to {x} percent of its original size                                           | decimal |
 | reports              | Report specific configurations, these can be left at the default settings                         | array   |
 | reports.file         | Name of the PowerShell 7 script being run, used to look up report settings                        | string  |
 | reports.reportName   | The name of the report can be set with this property yyyyMMdd-reportName                          | string  |
 | reports.tableStyle   | The style of the table you'd like to see the report rednered with in excel                        | string  |
 | reports.numberOfDays | The number of days you'd like to return if the filter contains a data parameter                   | int     |
-| reports.pdfScale     | Scale the data table up or down to a percent of its original size for rendering in pdf format     | int     |
+| reports.pdfScale     | Reduce the table to {x} percent of its original size for rednering in pdf format                  | int     |
 
 > [!IMPORTANT]
 > Reports, with lots of columns, need to be scaled down significantly when rendering to pdf. You can also remove unnecessary column instead.
