@@ -1,5 +1,5 @@
 # PowerProtect Reports (v19.16)
-Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf
+Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf format.
 
 # Usage
 - misc\logo.png change this to your logo.png
