@@ -6,6 +6,49 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 - PowerShell 7.(latest)
 - Microsoft® Excel® for Microsoft 365
 
+# Reports
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-activities-all    | All, asset level, protection activities in the last {x} days, including protection storage\storage unit and replication target\storage unit            | xlsx, pdf |
+
+![dm-activities-all](/Assets/dm-activities-all.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-activities-failed | All, asset level, failed protection activities in the last {x} days including the error code, error reason and extended error reason                   | xlsx, pdf |
+
+![dm-activities-failed](/Assets/dm-activities-failed.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-activities-stats  | All, asset level, protection activity status in the last {x} days including assetSize, preCompSize, postCompSize, dedupeRatio, and reductionPercentage | xlsx, pdf |
+
+![dm-activities-stats](/Assets/dm-activities-stats.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-assets-nocopies   | Get all assets with a lastAvailableCopyTime eq null                                                                                                    | xlsx, pdf |
+
+![dm-assets-nocopies](/Assets/dm-assets-nocopies.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-copies-location   | Get all of the copies for asset type {x} in location {x} (LOCAL, or CLOUD)                                                                             | xlsx, pdf |
+
+![dm-copies-location](/Assets/dm-copies-location.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-identities-access | All, identity access account and groups configured with access to PowerProtect Data Manager                                                            | xlsx, pdf |
+
+![dm-identities-access](/Assets/dm-identities-access.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-nas-file          | A list of files protected on your NAS array (requires the PowerProtect Data Manager search engine)                                                     | xlsx, pdf |
+
+![dm-nas-file](/Assets/dm-nas-file.png)
+
 # Usage
 - misc\logo.png change this to your logo.png
 - misc\configuration.json change this to align with your environment
@@ -101,46 +144,3 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
     ]
 }
 ```
- 
-# Reports
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-activities-all    | All, asset level, protection activities in the last {x} days, including protection storage\storage unit and replication target\storage unit            | xlsx, pdf |
-
-![dm-activities-all](/Assets/dm-activities-all.png)
-
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-activities-failed | All, asset level, failed protection activities in the last {x} days including the error code, error reason and extended error reason                   | xlsx, pdf |
-
-![dm-activities-failed](/Assets/dm-activities-failed.png)
-
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-activities-stats  | All, asset level, protection activity status in the last {x} days including assetSize, preCompSize, postCompSize, dedupeRatio, and reductionPercentage | xlsx, pdf |
-
-![dm-activities-stats](/Assets/dm-activities-stats.png)
-
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-assets-nocopies   | Get all assets with a lastAvailableCopyTime eq null                                                                                                    | xlsx, pdf |
-
-![dm-assets-nocopies](/Assets/dm-assets-nocopies.png)
-
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-copies-location   | Get all of the copies for asset type {x} in location {x} (LOCAL, or CLOUD)                                                                             | xlsx, pdf |
-
-![dm-copies-location](/Assets/dm-copies-location.png)
-
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-identities-access | All, identity access account and groups configured with access to PowerProtect Data Manager                                                            | xlsx, pdf |
-
-![dm-identities-access](/Assets/dm-identities-access.png)
-
-| Name                 | Description                                                                                                                                            | Output    |
-|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-nas-file          | A list of files protected on your NAS array (requires the PowerProtect Data Manager search engine)                                                     | xlsx, pdf |
-
-![dm-nas-file](/Assets/dm-nas-file.png)
