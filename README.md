@@ -1,4 +1,4 @@
-# power-protect-reports
+# PowerProtect Reports (v19.16)
 Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf
 
 # Usage
@@ -17,7 +17,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 | reports              | Report specific configurations, these can be left at the default settings                         | array  |
 
 
-## Example configuration.json
+## Sample configuration.json
 ```
 {
     "servers": [
