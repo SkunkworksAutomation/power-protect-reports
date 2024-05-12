@@ -39,7 +39,6 @@
             "file":"dm-assets-nocopies.ps1",
             "reportName":"dm-assets-nocopies",
             "tableStyle": "TableStyleMedium3",
-            "numberOfDays": 1,
             "pdfScale": 31,
             "pdfOrientation": 2
         },
@@ -47,7 +46,6 @@
             "file":"dm-assets-nopolicy.ps1",
             "reportName":"dm-assets-nopolicy",
             "tableStyle": "TableStyleMedium3",
-            "numberOfDays": 1,
             "pdfScale": 31,
             "pdfOrientation": 2
         },
