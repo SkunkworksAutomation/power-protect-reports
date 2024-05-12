@@ -618,15 +618,17 @@ for($i=0;$i -lt $Activities.length; $i++) {
     $Excel.cells.item($RowOffSet,11) = $Activities[$i].endTime
     $Excel.cells.item($RowOffSet,12) = $Activities[$i].duration
     $Excel.cells.item($RowOffSet,13) = $Activities[$i].nextScheduledTime
-
+    $Excel.cells.item($RowOffSet,14) = $Activities[$i].jobStatus
+    
+    # RED FOR FAILED
     if($Activities[$i].jobStatus -eq "FAILED") {
         $Excel.cells.item($RowOffSet,14).Interior.ColorIndex = 3 
     }
-    
-    $Excel.cells.item($RowOffSet,14) = $Activities[$i].jobStatus
+    # ORANGE FOR OK_WITH_ERRORS
     if($Activities[$i].jobStatus -eq "OK_WITH_ERRORS") {
         $Excel.cells.item($RowOffSet,14).Interior.ColorIndex = 44
     }
+
     $Excel.cells.item($RowOffSet,15) = $Activities[$i].assetSize
     $Excel.cells.item($RowOffSet,16) = $Activities[$i].bytesTransferred
     $Excel.cells.item($RowOffSet,17) = $Activities[$i].storageTarget
