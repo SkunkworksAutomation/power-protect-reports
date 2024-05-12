@@ -103,7 +103,7 @@ function connect-dmapi {
     PS> connect-ppdmapi -Server 'ppdm-01.vcorp.local'
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/docs/getting%20started/authentication-and-authorization.md
+    https://developer.dell.com/apis/4378/versions/19.16.0/docs/getting%20started/authentication-and-authorization.md
 
 #>
     [CmdletBinding()]
@@ -161,7 +161,7 @@ function disconnect-dmapi {
     PS> disconnect-dmapi
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/docs/getting%20started/authentication-and-authorization.md
+    https://developer.dell.com/apis/4378/versions/19.16.0/docs/getting%20started/authentication-and-authorization.md
 
 #>
     [CmdletBinding()]
@@ -213,7 +213,7 @@ function get-dmactivities {
     PS> $Activities = get-dmactivities -PageSize $PageSize
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/reference/ppdm-public.yaml/paths/~1api~1v2~1activities/get
+    https://developer.dell.com/apis/4378/versions/19.16.0/reference/ppdm-public.yaml/paths/~1api~1v2~1activities/get
 
 #>
     [CmdletBinding()]
@@ -286,7 +286,7 @@ function get-dmprotectionpolicies {
     PS>  $Policy = get-dmprotectionpolicies -Filters $Filters -PageSize 100
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/reference/ppdm-public.yaml/paths/~1api~1v2~1protection-policies/get
+    https://developer.dell.com/apis/4378/versions/19.16.0/reference/ppdm-public.yaml/paths/~1api~1v2~1protection-policies/get
 
 #>
     [CmdletBinding()]
@@ -363,7 +363,7 @@ function get-dmmtrees {
     PS>  $Mtrees = get-dmmtrees -PageSize 100
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/reference/ppdm-public.yaml/paths/~1api~1v2~1datadomain-mtrees/get
+    https://developer.dell.com/apis/4378/versions/19.16.0/reference/ppdm-public.yaml/paths/~1api~1v2~1datadomain-mtrees/get
 
 #>
     [CmdletBinding()]
@@ -418,7 +418,7 @@ function get-dmmtrees {
 
     } # END PROCESS
 }
-Function Convert-BytesToSize
+function Convert-BytesToSize
 {
 <#
     .SYNOPSIS
@@ -440,7 +440,7 @@ Function Convert-BytesToSize
 #>
 
 [CmdletBinding()]
-Param
+param
 (
     [parameter(Mandatory=$false,Position=0)][int64]$Size
 
@@ -474,13 +474,13 @@ Switch ($Size)
         $NewSize = “$([math]::Round(($Size /1KB),1))KB”
         Break;
     }
-    Default
+    default
     {
         $NewSize = “$([math]::Round($Size,2))Bytes”
         Break;
     }
 }
-Return $NewSize
+    return $NewSize
 
 }
 
