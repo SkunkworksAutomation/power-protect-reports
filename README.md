@@ -136,14 +136,14 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "file":"dm-assets-nocopies.ps1",
             "reportName":"dm-assets-nocopies",
             "tableStyle": "TableStyleMedium3",
-            "pdfScale": 31,
+            "pdfScale": 42,
             "pdfOrientation": 2
         },
         {
             "file":"dm-assets-nopolicy.ps1",
             "reportName":"dm-assets-nopolicy",
             "tableStyle": "TableStyleMedium3",
-            "pdfScale": 31,
+            "pdfScale": 42,
             "pdfOrientation": 2
         },
         {
@@ -151,7 +151,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "reportName":"dm-audit-logs",
             "tableStyle": "TableStyleMedium5",
             "numberOfDays": 1,
-            "pdfScale": 16,
+            "pdfScale": 50,
             "pdfOrientation": 2
         },
         {
@@ -160,21 +160,21 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "tableStyle": "TableStyleMedium18",
             "assetType": "VMWARE_VIRTUAL_MACHINE",
             "copyLocation":"LOCAL",
-            "pdfScale": 45,
+            "pdfScale": 50,
             "pdfOrientation": 2
         },
         {
             "file":"dm-credentials-external.ps1",
             "reportName":"dm-credentials-external",
             "tableStyle": "TableStyleMedium2",
-            "pdfScale": 95,
+            "pdfScale": 55,
             "pdfOrientation": 2
         },
         {
             "file":"dm-identities-access.ps1",
             "reportName":"dm-identities-access",
             "tableStyle": "TableStyleMedium2",
-            "pdfScale": 95,
+            "pdfScale": 75,
             "pdfOrientation": 2
         },
         {
