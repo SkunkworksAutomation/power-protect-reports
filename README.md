@@ -96,13 +96,13 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 # Reports
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-activities-all    | All, asset level, protection activities in the last x days, including protection storage\storage unit and replication target\storage unit              | xlsx, pdf |
+| dm-activities-all    | All, asset level, protection activities in the last {x} days, including protection storage\storage unit and replication target\storage unit            | xlsx, pdf |
 
 ![dm-activities-all](/Assets/dm-activities-all.png)
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-activities-failed | All, asset level, failed protection activities in the last x days including the error code, error reason and extended error reason                     | xlsx, pdf |
+| dm-activities-failed | All, asset level, failed protection activities in the last {x} days including the error code, error reason and extended error reason                   | xlsx, pdf |
 
 ![dm-activities-failed](/Assets/dm-activities-failed.png)
 
