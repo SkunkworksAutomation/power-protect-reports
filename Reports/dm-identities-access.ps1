@@ -96,7 +96,7 @@ function connect-dmapi {
     PS> connect-ppdmapi -Server 'ppdm-01.vcorp.local'
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/docs/getting%20started/authentication-and-authorization.md
+    https://developer.dell.com/apis/4378/versions/19.16.0/docs/getting%20started/authentication-and-authorization.md
 
 #>
     [CmdletBinding()]
@@ -230,7 +230,7 @@ function disconnect-dmapi {
     PS> disconnect-dmapi
 
     .LINK
-    https://developer.dell.com/apis/4378/versions/19.14.0/docs/getting%20started/authentication-and-authorization.md
+    https://developer.dell.com/apis/4378/versions/19.16.0/docs/getting%20started/authentication-and-authorization.md
 
 #>
     [CmdletBinding()]
