@@ -36,7 +36,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
-| dm-assets-nopolicy   | All assets not assigned to a protection policy which may indicate a gap in protection                                                                  | xlsx, pdf |
+| dm-assets-nopolicy   | All assets with a protectionPolicyId eq null which may indicate a gap in protection                                                                    | xlsx, pdf |
 
 ![dm-assets-nopolicy](/Assets/dm-assets-nopolicy.png)
 
