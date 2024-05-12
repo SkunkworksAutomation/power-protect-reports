@@ -125,7 +125,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-assets-nocopies   | Get all assets with a lastAvailableCopyTime eq null                                                                                                    | xlsx, pdf |
 
-[dm-assets-nocopies](/Assets/dm-assets-nocopies.png)
+![dm-assets-nocopies](/Assets/dm-assets-nocopies.png)
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
