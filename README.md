@@ -6,6 +6,9 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 - PowerShell 7.(latest)
 - Microsoft® Excel® for Microsoft 365
 
+> [!WARNING]
+> Some of these reports can potentially be very large. Ensure you adjusting an parameters within reasonable ranges.
+
 # Reports
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
@@ -13,26 +16,17 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 ![dm-activities-all](/Assets/dm-activities-all.png)
 
-> [!WARNING]
-> This report has the potential to be very large. Adjust the numberOfDays param within reason.
-
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-activities-failed | All, asset level, failed protection activities in the last {x} days including the error code, error reason and extended error reason                   | xlsx, pdf |
 
 ![dm-activities-failed](/Assets/dm-activities-failed.png)
 
-> [!WARNING]
-> This report has the potential to be very large. Adjust the numberOfDays param within reason.
-
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-activities-stats  | All, asset level, protection activity status in the last {x} days including assetSize, preCompSize, postCompSize, dedupeRatio, and reductionPercentage | xlsx, pdf |
 
 ![dm-activities-stats](/Assets/dm-activities-stats.png)
-
-> [!WARNING]
-> This report has the potential to be very large. Adjust the numberOfDays param within reason.
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
@@ -46,8 +40,6 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 ![dm-copies-location](/Assets/dm-copies-location.png)
 
-> [!WARNING]
-> This report has the potential to be very large.
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
