@@ -1,7 +1,7 @@
 
 {
     "servers": [
-        "10.x.x.x"
+        "10.239.100.131"
     ],
     "retries": 3,
     "seconds": 10,
@@ -31,6 +31,14 @@
             "file":"dm-activities-stats.ps1",
             "reportName":"dm-activities-stats",
             "tableStyle": "TableStyleMedium2",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-assets-nocopies.ps1",
+            "reportName":"dm-assets-nocopies",
+            "tableStyle": "TableStyleMedium3",
             "numberOfDays": 1,
             "pdfScale": 31,
             "pdfOrientation": 2

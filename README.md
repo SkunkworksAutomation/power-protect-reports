@@ -68,6 +68,14 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "pdfOrientation": 2
         },
         {
+            "file":"dm-assets-nocopies.ps1",
+            "reportName":"dm-assets-nocopies",
+            "tableStyle": "TableStyleMedium3",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
             "file":"dm-copies-location.ps1",
             "reportName":"dm-copies-location",
             "tableStyle": "TableStyleMedium18",
@@ -112,6 +120,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 | dm-activities-stats  | All, asset level, protection activity status in the last {x} days including assetSize, preCompSize, postCompSize, dedupeRatio, and reductionPercentage | xlsx, pdf |
 
 ![dm-activities-stats](/Assets/dm-activities-stats.png)
+
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-assets-nocopies   | Get all assets with a lastAvailableCopyTime eq null                                                                                                    | xlsx, pdf |
+
+[dm-assets-nocopies](/Assets/dm-assets-nocopies.png)
 
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
