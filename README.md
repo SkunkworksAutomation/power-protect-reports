@@ -25,6 +25,8 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 | reports.numberOfDays | The number of days you'd like to return if the filter contains a data parameter                   | int     |
 | reports.pdfScale     | Scale the data table up or down to a percent of its original size for rendering in pdf format     | int     |
 
+> [!IMPORTANT]
+> Rendering reports with lots of columns needs to be scaled down significantly which means you'll have to zoom in when you are viewing the report. 
 
 ## Sample configuration.json
 ```
