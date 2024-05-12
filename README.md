@@ -144,6 +144,13 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "pdfOrientation": 2
         },
         {
+            "file":"dm-credentials-external.ps1",
+            "reportName":"dm-credentials-external",
+            "tableStyle": "TableStyleMedium2",
+            "pdfScale": 95,
+            "pdfOrientation": 2
+        },
+        {
             "file":"dm-identities-access.ps1",
             "reportName":"dm-identities-access",
             "tableStyle": "TableStyleMedium2",
