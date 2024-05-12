@@ -40,6 +40,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 ![dm-assets-nopolicy](/Assets/dm-assets-nopolicy.png)
 
+ Name                  | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-audit-logs        | All audit audit log entires in the last {x} days                                                                                                       | xlsx, pdf |
+
+![dm-audit-logs](/Assets/dm-audit-logs.png)
+
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-copies-location   | Get all of the copies for asset type {x} in location {x} (LOCAL, or CLOUD)                                                                             | xlsx, pdf |
@@ -138,6 +144,14 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "reportName":"dm-assets-nopolicy",
             "tableStyle": "TableStyleMedium3",
             "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-audit-logs.ps1",
+            "reportName":"dm-audit-logs",
+            "tableStyle": "TableStyleMedium5",
+            "numberOfDays": 1,
+            "pdfScale": 16,
             "pdfOrientation": 2
         },
         {

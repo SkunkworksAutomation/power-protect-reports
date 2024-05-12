@@ -50,6 +50,14 @@
             "pdfOrientation": 2
         },
         {
+            "file":"dm-audit-logs.ps1",
+            "reportName":"dm-audit-logs",
+            "tableStyle": "TableStyleMedium5",
+            "numberOfDays": 1,
+            "pdfScale": 16,
+            "pdfOrientation": 2
+        },
+        {
             "file":"dm-copies-location.ps1",
             "reportName":"dm-copies-location",
             "tableStyle": "TableStyleMedium18",
