@@ -26,7 +26,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 | reports.pdfScale     | Scale the data table up or down to a percent of its original size for rendering in pdf format     | int     |
 
 > [!IMPORTANT]
-> Reports, with lots of columns, need to be scaled down significantly rendering to pdf, or ideally remove unnecessary columns.
+> Reports, with lots of columns, need to be scaled down significantly when rendering to pdf, or ideally remove unnecessary columns.
 
 ## Sample configuration.json
 ```
