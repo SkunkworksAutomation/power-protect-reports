@@ -142,10 +142,10 @@ function connect-dmapi {
 function get-identityprovisions {
     <#
         .SYNOPSIS
-        Get PowerProtect Data Manager protection policies
+        Get PowerProtect Data Manager identity access provisions
         
         .DESCRIPTION
-        Get PowerProtect Data Manager protection policies based on filters
+        Get PowerProtect Data Manager identity access provisions
     
         .PARAMETER Filters
         An array of values used to filter the query
@@ -213,7 +213,76 @@ function get-identityprovisions {
 
     } # END PROCESS
 }
+
+function get-identityaccessmembers {
+    <#
+        .SYNOPSIS
+        Get PowerProtect Data Manager identity access group members
+        
+        .DESCRIPTION
+        Get PowerProtect Data Manager identity access group members
+        
+        .OUTPUTS
+        System.Array
     
+        .EXAMPLE
+        PS> # GET active-directory-identity-providers
+        PS>  $members = get-identityaccessmembers
+
+        .LINK
+        https://developer.dell.com/apis/4378/versions/19.16.0/reference/ppdm-public-v2.yaml/paths/~1api~1v2~1active-directory-identity-providers~1%7Blocator%7D~1accounts~1%7Baccount-locator%7D/get
+    #>
+    [CmdletBinding()]
+    param (
+        [Parameter( Mandatory=$false)]
+        [string]$Locator,
+        [Parameter( Mandatory=$false)]
+        [string]$Group,
+        [Parameter( Mandatory=$false)]
+        [int]$PageSize
+    )
+    begin {}
+    process {
+        
+        $Page = 1
+        $Results = @()
+        $Encode = [System.Net.WebUtility]::UrlEncode($Group)
+        
+        $Endpoint = "identity-sources/$($Locator)/groups/$($Group)/users"
+
+        $Query =  Invoke-RestMethod -Uri "$($AuthObject.server)/$($Endpoint)?pageSize=$($PageSize)&page=$($Page)" `
+        -Method GET `
+        -ContentType 'application/json' `
+        -Headers ($AuthObject.token) `
+        -SkipCertificateCheck
+
+        # CAPTURE THE RESULTS
+        $Results = $Query.content
+        
+        if($Query.page.totalPages -gt 1) {
+            # INCREMENT THE PAGE NUMBER
+            $Page++
+            # PAGE THROUGH THE RESULTS
+            do {
+                $Paging = Invoke-RestMethod -Uri "$($AuthObject.server)/$($Endpoint)?pageSize=$($PageSize)&page=$($Page)" `
+                -Method GET `
+                -ContentType 'application/json' `
+                -Headers ($AuthObject.token) `
+                -SkipCertificateCheck
+
+                # CAPTURE THE RESULTS
+                $Results += $Paging.content
+
+                # INCREMENT THE PAGE NUMBER
+                $Page++   
+            } 
+            until ($Paging.page.number -eq $Query.page.totalPages)
+        }
+        return $Results
+
+    } # END PROCESS
+}
+
 function disconnect-dmapi {
 <#
     .SYNOPSIS
@@ -271,7 +340,27 @@ $Servers | foreach-object {
                     lastModified = $Id.lastModified
                     ppdmServer = $_
                 } # END OBJECT
+
                 $Report += (New-Object -TypeName psobject -Property $object)
+
+                if($Id.identityProvider.serviceMarker -ne 'local'){
+                    # LOOK UP THE GROUP MEMBERS
+                    $members = get-identityaccessmembers -Locator $Id.identityProvider.locator -Group $Id.subject -PageSize $PageSize
+
+                    foreach($member in $members){
+                        $object = [ordered]@{
+                            user = "$($Id.subject)\$($member.name)"
+                            type = $Id.identityProvider.serviceMarker
+                            domain = $Id.identityProvider.selector
+                            roles = $Id.access.role.name -join ','
+                            availableSince = $Id.availableSince
+                            lastModified = $Id.lastModified
+                            ppdmServer = $_
+                        } # END OBJECT
+
+                        $Report += (New-Object -TypeName psobject -Property $object)
+                    }
+                }
             }
             # DISCONNECT FROM THE API
             disconnect-dmapi
