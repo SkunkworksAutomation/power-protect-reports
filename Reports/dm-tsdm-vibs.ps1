@@ -253,7 +253,7 @@ function get-dmvirtualcontainers {
 
         if($Filters.Length -gt 0) {
             $Join = ($Filters -join ' ') -replace '\s','%20' -replace '"','%22'
-            $Endpoint = "$($Endpoint)?filterType=vCenterInventory&filter=$($Join)&pageSize=$($PageSize)&page=$($Page)"
+            $Endpoint = "$($Endpoint)?filterType=vCenterInventory&filter=$($Join)&recursive=false"
         }
 
         $Query =  Invoke-RestMethod -Uri "$($AuthObject.server)/$($Endpoint)" `
@@ -268,7 +268,7 @@ function get-dmvirtualcontainers {
             $Page++
             # PAGE THROUGH THE RESULTS
             do {
-                $Paging = Invoke-RestMethod -Uri "$($AuthObject.server)/$($Endpoint)pageSize=$($PageSize)&page=$($Page)" `
+                $Paging = Invoke-RestMethod -Uri "$($AuthObject.server)/$($Endpoint)&pageSize=$($PageSize)&page=$($Page)" `
                 -Method GET `
                 -ContentType 'application/json' `
                 -Headers ($AuthObject.token) `
