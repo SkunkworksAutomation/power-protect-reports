@@ -71,6 +71,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 ![dm-nas-file](/Assets/dm-nas-file.png)
 
+| Name                 | Description                                                                                                                                            | Output    |
+|:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-tsdm-vibs         | vMware installation bundle (VIB) details for PowerProtect Data Manager's transparent data snapshots                                                    | xlsx, pdf |
+
+![dm-nas-file](/Assets/dm-tsdm-vibs.png)
+
 # Usage
 - misc\logo.png change this to your logo.png
 - misc\configuration.json change this to align with your environment
@@ -182,6 +188,13 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "reportName":"dm-nas-file",
             "tableStyle": "TableStyleMedium2",
             "pdfScale": 35,
+            "pdfOrientation": 2
+        },
+        {
+            "file":"dm-tsdm-vibs.ps1",
+            "reportName":"dm-tsdm-vibs",
+            "tableStyle": "TableStyleMedium2",
+            "pdfScale": 50,
             "pdfOrientation": 2
         }
     ]
