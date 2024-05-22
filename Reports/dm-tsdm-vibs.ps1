@@ -326,7 +326,7 @@ function get-dmvibs {
         $Page = 1
         $Results = @()
         $Endpoint = "vib-details"
-        $Endpoint = "$($Endpoint)?parentResourceId=$($Id)"
+        $Endpoint = "$($Endpoint)?parentResourceId=$($Id)&pageSize=$($PageSize)&page=$($Page)"
 
 
         $Query =  Invoke-RestMethod -Uri "$($AuthObject.server)/$($Endpoint)" `
