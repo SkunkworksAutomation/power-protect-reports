@@ -149,7 +149,7 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "reportName":"dm-activities-summary",
             "tableStyle": "TableStyleMedium2",
             "numberOfDays": 1,
-            "pdfScale": 31,
+            "pdfScale": 40,
             "pdfOrientation": 2
         },
         {
