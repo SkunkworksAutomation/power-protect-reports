@@ -28,6 +28,12 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 
 ![dm-activities-stats](/Assets/dm-activities-stats.png)
 
+| Name                  | Description                                                                                                                                           | Output    |
+|:---------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
+| dm-activities-summary | All, asset level, protection activity status in the last {x} summarized by activity status                                                            | xlsx, pdf |
+
+![dm-activities-summary](/Assets/dm-activities-summary.png)
+
 | Name                 | Description                                                                                                                                            | Output    |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------|:---------:|
 | dm-assets-nocopies   | All assets with a lastAvailableCopyTime eq null which may indicate a gap in protection                                                                 | xlsx, pdf |
