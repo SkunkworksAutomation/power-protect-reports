@@ -145,6 +145,14 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
             "pdfOrientation": 2
         },
         {
+            "file":"dm-activities-summary.ps1",
+            "reportName":"dm-activities-summary",
+            "tableStyle": "TableStyleMedium2",
+            "numberOfDays": 1,
+            "pdfScale": 31,
+            "pdfOrientation": 2
+        },
+        {
             "file":"dm-assets-nocopies.ps1",
             "reportName":"dm-assets-nocopies",
             "tableStyle": "TableStyleMedium3",
