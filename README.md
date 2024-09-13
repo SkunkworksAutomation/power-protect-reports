@@ -9,6 +9,9 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 # Excel
 - Microsoft® Excel® for Microsoft 365
 
+# Notes
+- The csv versions of the reports are not tied to the config. Any custom parameters you need are contained within each report script.
+
 > [!WARNING]
 > Some of these reports can potentially be very large. Ensure you adjusting an parameters within reasonable ranges.
 
