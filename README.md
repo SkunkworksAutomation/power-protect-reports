@@ -4,6 +4,9 @@ Pull reports form your PowerProtect Data Manager server(s) that output to excel,
 # Dependencies
 - Windows 10 or 11
 - PowerShell 7.(latest)
+# Csv
+- No additional dependencies
+# Excel
 - Microsoft® Excel® for Microsoft 365
 
 > [!WARNING]
