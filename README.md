@@ -1,4 +1,4 @@
-# PowerProtect Reports (v19.16)
+# PowerProtect Reports (v19.17)
 Pull reports form your PowerProtect Data Manager server(s) that output to excel, or pdf format.
 
 # Dependencies
